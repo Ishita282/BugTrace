@@ -152,7 +152,7 @@ export default function BugWorkspace() {
   // SHARE BUG
   // =========================
   const shareBug = () => {
-    const link = `${window.location.origin}/bug/share/${bug.shareToken}`;
+    const link = `${import.meta.env.VITE_API_URL}/bugs/share/${bug.shareToken}`;
     navigator.clipboard.writeText(link);
     alert("Share link copied!");
   };
@@ -189,17 +189,20 @@ export default function BugWorkspace() {
 
           <div className="flex items-center justify-between gap-3 mb-4">
             <button
-            onClick={() => {
-              if (steps.length === 0) return;
-              setIsPlaying((p) => !p);
-            }}
-            className="bg-green-500 text-white px-3 py-2 rounded"
-          >
-            {isPlaying ? "Pause Replay" : "Replay Steps"}
-          </button>
-          <button className="bg-blue-500 text-white px-3 py-2 rounded" onClick={shareBug}>
-            Share Bug
-          </button>
+              onClick={() => {
+                if (steps.length === 0) return;
+                setIsPlaying((p) => !p);
+              }}
+              className="bg-green-500 text-white px-3 py-2 rounded"
+            >
+              {isPlaying ? "Pause Replay" : "Replay Steps"}
+            </button>
+            <button
+              className="bg-blue-500 text-white px-3 py-2 rounded"
+              onClick={shareBug}
+            >
+              Share Bug
+            </button>
           </div>
         </div>
 

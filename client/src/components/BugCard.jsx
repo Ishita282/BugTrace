@@ -6,7 +6,7 @@ const BugCard = ({ bug }) => {
 
   return (
     <div
-      onClick={() => navigate(`/bug/${bug._id}`)}
+      onClick={() => navigate(`/bugs/${bug._id}`)}
       className="bg-white p-4 rounded shadow cursor-pointer hover:shadow-md"
     >
       <p>{bug._id}</p>

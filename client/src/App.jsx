@@ -36,7 +36,7 @@ export default function App() {
         />
 
         <Route
-          path="/bug/:id"
+          path="/bugs/:id"
           element={
             <PrivateRoute>
               <BugWorkspace />
@@ -44,7 +44,7 @@ export default function App() {
           }
         />
 
-        <Route path="/bug/share/:token" element={<BugShare />} />
+        <Route path="/bugs/share/:token" element={<BugShare />} />
       </Routes>
 
       <Footer />

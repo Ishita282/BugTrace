@@ -117,7 +117,7 @@ const Dashboard = () => {
           {bugs.map((bug) => (
             <div
               key={bug._id}
-              onClick={() => navigate(`/bug/${bug._id}`)}
+              onClick={() => navigate(`/bugs/${bug._id}`)}
               className="border p-4 rounded-lg shadow hover:shadow-md transition cursor-pointer"
             >
               <p className="text-sm text-gray-500">ID: {bug._id}</p>
