@@ -52,3 +52,5 @@ coverage/
 # =========================
 *.pem
 *.key
+
+package-lock.json
