@@ -75,6 +75,13 @@ JWT_SECRET=your_secret_key
 
 ---
 
+## 🚀 Live Demo
+
+- 🌐 **Frontend (Vercel):** https://bug-trace-beta.vercel.app/
+- ⚙️ **Backend (Render):** https://bugtrace-7bk3.onrender.com
+
+---
+
 ## FUTURE IMPROVEMENTS
     - Role-based access control
     - Real-time notifications
