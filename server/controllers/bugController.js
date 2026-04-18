@@ -230,7 +230,6 @@ exports.deleteBug = async (req, res, next) => {
 // GET bug by share token (NO AUTH REQUIRED)
 // ==============================
 exports.getBugByShareToken = async (req, res, next) => {
-  console.log("shared route is hit");
   try {
     const bug = await Bug.findOne({ shareToken: req.params.token });
 

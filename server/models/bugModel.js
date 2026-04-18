@@ -27,7 +27,7 @@ const bugSchema = new mongoose.Schema(
     },
     shareToken: {
       type: String,
-      default: () => crypto.randomUUID(),
+      default: () => crypto.randomBytes(16).toString("hex"),
       unique: true,
     },
     steps: [stepSchema],
