@@ -22,6 +22,17 @@ API.interceptors.request.use((req) => {
 });
 
 // ==============================
+// Login
+// ==============================
+export const login = (data) => API.post("/auth/login", data);
+
+// ==============================
+// Register
+// ==============================
+export const register = (data) => API.post("/auth/register", data);
+
+
+// ==============================
 // CONTACT SUPPORT
 // ==============================
 export const sendContact = (data) => API.post("/contact", data);
@@ -68,4 +79,3 @@ export const deleteStep = (bugId, stepId) =>
 // ==============================
 export const updateStep = (bugId, stepId, data) =>
   API.put(`/bugs/${bugId}/steps/${stepId}`, data);
-

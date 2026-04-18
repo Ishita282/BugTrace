@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import { register } from "../urlApi/api";
 import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
@@ -17,8 +17,7 @@ const Register = () => {
     try {
       const guestId = localStorage.getItem("guestId");
 
-      await axios.post(
-        "http://localhost:4000/auth/register",
+      await register(
         {
           email,
           password,
