@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+/* =========================
+   GLOBAL RESPONSIVENESS FIX
+   ========================= */
+
+/* MOBILE (default safety layer) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Responsive modals */
+  .modal-box,
+  [class*="w-[800px]"],
+  [class*="w-[850px]"],
+  [class*="w-[700px]"],
+  [class*="w-[520px]"],
+  [class*="w-[400px]"] {
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+
+  /* Height safety */
+  .modal-box,
+  [class*="h-[500px]"],
+  [class*="h-[540px]"] {
+    height: calc(100dvh - 2rem) !important;
+    max-height: calc(100dvh - 2rem) !important;
+    overflow-y: auto;
+  }
+
+  /* Collapse grids to single column */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Smooth text scaling */
+  h1 {
+    font-size: clamp(1.6rem, 5vw, 1.8rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.2rem, 4vw, 1.4rem) !important;
+  }
+
+  /* Prevent image overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* TABLET FIX */
+@media (max-width: 1024px) {
+  [class*="w-[850px]"],
+  [class*="w-[800px]"] {
+    width: 90% !important;
+    max-width: 90% !important;
+  }
+}
